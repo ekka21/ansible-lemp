@@ -1,0 +1,17 @@
+---
+
+- block:
+
+    - name: Install ZSH
+      yum: name=zsh state=present
+
+    - name: Install Oh My ZSH
+      git: repo=git://github.com/robbyrussell/oh-my-zsh.git dest=/home/{{ ssh_user }}/.oh-my-zsh update=no
+
+    - name: Copy .zshrc template
+      template: src=zshrc.template dest=/home/{{ ssh_user }}/.zshrc
+
+    - name: Change default shell
+      user: name={{ ssh_user }} shell=/bin/zsh
+
+  when: enabled_ohmyzsh

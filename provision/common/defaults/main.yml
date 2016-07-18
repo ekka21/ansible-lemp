@@ -1,0 +1,6 @@
+---
+
+common_packages:
+  - gcc
+  - openssl-devel
+  - git

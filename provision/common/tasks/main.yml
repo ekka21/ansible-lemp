@@ -1,0 +1,8 @@
+---
+
+- name: Update all packages
+  yum: name=* state=latest
+
+- name: Ensure common packages are installed
+  yum: name={{ item }} state=latest
+  with_items: "{{ common_packages }}"

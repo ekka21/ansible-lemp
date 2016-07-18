@@ -1,0 +1,4 @@
+---
+
+ssh_user: vagrant
+ohmyzsh_theme: robbyrussell

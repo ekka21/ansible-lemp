@@ -1,0 +1,20 @@
+---
+
+- hosts: all
+  become: yes
+  gather_facts: yes
+  vars_files:
+    - vars.yml
+
+  roles:
+    - geerlingguy.firewall
+    - geerlingguy.repo-epel
+    - geerlingguy.repo-remi
+    - common
+    - geerlingguy.ntp
+    - geerlingguy.mysql
+    - geerlingguy.nginx
+    - geerlingguy.php
+    - geerlingguy.composer
+    - { role: ohmyzsh, tag: zsh }
+

@@ -1,0 +1,39 @@
+---
+
+ntp_timezone: America/Chicago
+
+enabled_ohmyzsh: true
+ohmyzsh_theme: crunch
+
+php_use_managed_ini: true
+php_display_errors: "On"
+php_webserver_daemon: nginx
+php_enable_php_fpm: true
+php_enablerepo: remi-php70
+php_packages:
+  - ImageMagick
+  - php
+  - php-cli
+  - php-common
+  - php-devel
+  - php-gd
+  - php-imap
+  - php-ldap
+  - php-mbstring
+  - php-pdo
+  - php-pear
+  - php-xml
+  - php-xmlrpc
+  - php-fpm
+  - php-mcrypt
+  - php-mysql
+  - php-zip
+
+mysql_root_password: root
+mysql_packages:
+  - mariadb
+  - mariadb-server
+  - mariadb-libs
+  - MySQL-python
+  - perl-DBD-MySQL
+
