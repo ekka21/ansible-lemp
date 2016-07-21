@@ -2,9 +2,6 @@
 
 ntp_timezone: America/Chicago
 
-enabled_ohmyzsh: true
-ohmyzsh_theme: crunch
-
 php_use_managed_ini: true
 php_display_errors: "On"
 php_webserver_daemon: nginx
